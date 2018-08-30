@@ -38,7 +38,7 @@ footer {
     padding: 6px 23px;
 }
 
-input[type=text], input[type=password], input[type=email], input[type=tel] {
+input[type=text], input[type=password], input[type=email], input[type=tel], input[type=search] {
     width: 100%;
     padding: 12px 15px;
     margin: 8px 0;
@@ -173,6 +173,43 @@ textarea {
     height: 100px;
 }
 
+button {
+    width: 100%;
+    margin-bottom: 2px;
+    height: 48px;
+    background: #34495e;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: -10px;
+    border: 1px #333 solid;
+    cursor: pointer;
+    outline: none;
+    font-size: 17px;
+}
+.price {
+color: #e74c3c;
+font-size: 18px;
+text-transform: uppercase;
+}
+
+.container {
+padding: 2px 16px;
+}
+.container h4 {
+margin-top: -2px;
+width: 100%;
+line-height: 1.2;
+}
+.container p {
+margin-top: -15px;
+word-wrap: break-word;
+}
+button:hover {
+    background: #333;
+    color: #fff;
+}
+
+
 #works h4 {
     font-size: 12px;
 }
@@ -244,6 +281,14 @@ section h2 {
     padding: 40px 15% 0 15%;
 }
 
+.search-container {
+    margin-left: 30%
+}
+
+.search-container form {
+    margin-top: -20px;
+}
+
 #contact p {
     margin-top: -1.5em;
 }
@@ -261,6 +306,11 @@ section h2 {
 
 .mg-top-10 {
     margin-top: 5px;
+}
+
+.mg-card {
+    margin: 20px 10px 0 0;
+    height: auto;
 }
 
 .brand-name {
@@ -286,6 +336,22 @@ img {
     background-size: cover;
     background-repeat: no-repeat;
     padding: 10% 0px 70px 0px;
+}
+
+#search-box {
+    width: 50%;
+    border-radius: 2px;
+    padding-right: 50px;
+}
+
+.input-group button {
+    width: 50px;
+    height: 40px;
+    border-radius: 2px;
+    outline: none;
+    margin-left: -55px;
+    background: #34495e;
+    color: #fff;
 }
 
 header .topnav span {
@@ -433,7 +499,24 @@ header .topnav span {
     .message h3 {
         font-size: 19px;
     }
+    #search-box {
+        width: 80%;
+        border-radius: 2px;
+        padding-right: 50px;
+    }
 
+    .input-group button {
+        width: 50px;
+        height: 40px;
+        border-radius: 2px;
+        outline: none;
+        margin-left: -55px;
+        background: #34495e;
+        color: #fff;
+    }
 
-
+    .search-container {
+        margin: 24px 0 12px 0;
+        position: relative;
+    }
   }
