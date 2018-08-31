@@ -38,7 +38,7 @@ footer {
     padding: 6px 23px;
 }
 
-input[type=text], input[type=password], input[type=email], input[type=tel], input[type=search] {
+input[type=text], input[type=password], input[type=email], input[type=tel], input[type=search], select {
     width: 100%;
     padding: 12px 15px;
     margin: 8px 0;
@@ -47,6 +47,15 @@ input[type=text], input[type=password], input[type=email], input[type=tel], inpu
     box-sizing: border-box;
     border-radius: 6px;
     outline: none;
+}
+
+.table-padding {
+    padding: 0px 15% 0px 15%
+}
+
+.order-box-p {
+    margin: 20px auto;
+    padding: 0px 5% 0px 5%;
 }
 
 table {
@@ -74,6 +83,12 @@ table th {
     font-size: .85em;
     letter-spacing: .1em;
     text-transform: uppercase;
+    background: #34495e;
+    color: #fff;
+}
+table tr:hover {
+    background: #34495e;
+    color: #fff;
 }
 textarea {
     width: 100%;
@@ -152,6 +167,7 @@ textarea {
 #map {
     width: 100%;
     height: 400px;
+    margin: 40px;
 }
 
 .message {
@@ -193,6 +209,16 @@ textarea {
 .col-3 {
     float: left;
     width: 33.33%;
+}
+
+.col-3-2 {
+    float: left;
+    width: 70%
+}
+
+.col-2-3 {
+    float: left;
+    width: 30%;
 }
 
 .col-4 {
@@ -535,6 +561,14 @@ header .topnav span {
         width: 100%;
     }
 
+    .col-3-2 {
+        width: 100%
+    }
+
+    .col-2-3 {
+        width: 100%;
+    }
+
     .col-3 {
         width: 100%;
     }
@@ -666,5 +700,8 @@ header .topnav span {
     .search-container {
         margin: 24px 0 12px 0;
         position: relative;
+    }
+    .table-padding {
+        padding: 0px 5% 0px 5%
     }
   }
