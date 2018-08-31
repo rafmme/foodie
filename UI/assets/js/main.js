@@ -1,4 +1,6 @@
-const orderModal = document.getElementById('order-form');
+const editMealModal = document.getElementById('edit-meal');
+const updateOrderModal = document.getElementById('update')
+const addMealModal = document.getElementById('add-meal')
 
 const toggleBtn = () => {
     const x = document.getElementById("myTopnav");

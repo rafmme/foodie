@@ -27,7 +27,7 @@
                     <i class="fa fa-dollar"></i> All Orders</a>
                 <a href="foods.html">
                     <i class="fa fa-spoon"></i> Foods</a>
-                <a href="index.html">
+                <a href="../login.html">
                     <i class="fa fa-sign-out"></i> Sign out</a>
             </div>
             <a href="javascript:void(0);" id="toggle" class="icon" onclick="toggleBtn()">
@@ -132,6 +132,7 @@
                     <tr>
                         <th scope="col">S/N</th>
                         <th scope="col">OrderID</th>
+                        <th scope="col">Customer</th>
                         <th scope="col">Food Item</th>
                         <th scope="col">Amount</th>
                         <th scope="col">Date</th>
@@ -143,15 +144,17 @@
                     <tr>
                         <td data-label="S/N">1</td>
                         <td data-label="OrderID">OD4575-4748</td>
+                        <td data-label="Customer">jma@yahoo.com</td>
                         <td data-label="Food Item">Fried Burger</td>
                         <td data-label="Amount">₦1,190.50</td>
                         <td data-label="Date">08/31/2018</td>
                         <td data-label="Status">Pending</td>
-                        <td data-label=""><button class="accept-btn">Update</button></td>
+                        <td data-label=""><button class="accept-btn" onclick="showModal('update')">Update</button></td>
                     </tr>
                     <tr>
                         <td data-label="S/N">2</td>
                         <td data-label="OrderID">OD4575-4747</td>
+                        <td data-label="Customer">jma@yahoo.com</td>
                         <td data-label="Food Item">Fried Burger</td>
                         <td data-label="Amount">₦1,190.50</td>
                         <td data-label="Date">08/31/2018</td>
@@ -161,15 +164,17 @@
                     <tr>
                         <td data-label="S/N">3</td>
                         <td data-label="OrderID">OD4575-4746</td>
+                        <td data-label="Customer">jma@yahoo.com</td>
                         <td data-label="Food Item">Fried Burger</td>
                         <td data-label="Amount">₦1,190.50</td>
                         <td data-label="Date">08/31/2018</td>
                         <td data-label="Status">Accepted</td>
-                        <td data-label=""><button class="accept-btn">Update</button></td>
+                        <td data-label=""><button class="accept-btn" onclick="showModal('update')">Update</button></td>
                     </tr>
                     <tr>
                         <td data-label="S/N">4</td>
                         <td data-label="OrderID">OD4575-4745</td>
+                        <td data-label="Customer">jma@yahoo.com</td>
                         <td data-label="Food Item">Fried Burger</td>
                         <td data-label="Amount">₦1,190.50</td>
                         <td data-label="Date">08/31/2018</td>
@@ -179,6 +184,7 @@
                     <tr>
                         <td data-label="S/N">5</td>
                         <td data-label="OrderID">OD4575-4745</td>
+                        <td data-label="Customer">jma@yahoo.com</td>
                         <td data-label="Food Item">Fried Burger</td>
                         <td data-label="Amount">₦1,190.50</td>
                         <td data-label="Date">08/31/2018</td>
@@ -188,6 +194,7 @@
                     <tr>
                         <td data-label="S/N">6</td>
                         <td data-label="OrderID">OD4575-4744</td>
+                        <td data-label="Customer">jma@yahoo.com</td>
                         <td data-label="Food Item">Fried Burger</td>
                         <td data-label="Amount">₦1,190.50</td>
                         <td data-label="Date">08/31/2018</td>
@@ -197,17 +204,42 @@
                     <tr>
                         <td data-label="S/N">7</td>
                         <td data-label="OrderID">OD4575-4743</td>
+                        <td data-label="Customer">jma@yahoo.com</td>
                         <td data-label="Food Item">Fried Burger</td>
                         <td data-label="Amount">₦1,190.50</td>
                         <td data-label="Date">08/31/2018</td>
                         <td data-label="Status">Pending</td>
-                        <td data-label=""><button class="accept-btn">Update</button></td>
+                        <td data-label=""><button class="accept-btn" onclick="showModal('update')">Update</button></td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <br>
     </div>
+    <div id="update" class="modal">
+            <form class="container modal-content animate" method="POST" id="update-form">
+                <div class="imgcontainer">
+                    <span style="margin-top: -15px;" onclick="closeModal('update')" class="close" title="Close Modal">&times;</span>
+                </div>
+                <h3>Update Order</h3>
+                <label for="orderID">Order ID</label>
+                <input type="text" name="" id="orderID" value="OD4558-5777" disabled>
+                <label for="customer">Customer</label>
+                <input type="text" name="" id="customer" value="rafmme@gmail.com" disabled>
+                <label for="title">Food</label>
+                <input type="text" name="" id="title" disabled value="Fried Water">
+                <label for="qty">Quantity</label>
+                <input type="number" value="10" name="" id="qty" disabled value="1">
+                <label for="price">Price</label>
+                <input type="number" value="5000" name="" id="price" disabled value="4,000">
+                <label for="Status">Mark as completed</label>
+                <select name="" id="status">
+                    <option value=""></option>
+                    <option value="completed">completed</option>
+                </select>
+                <button style="margin-top: auto;" type="submit">Modify Order</button>
+            </form>
+        </div>
     <footer>
         <p class="text-center">&copy; faray</p>
     </footer>
