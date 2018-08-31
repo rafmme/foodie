@@ -38,7 +38,8 @@ footer {
     padding: 6px 23px;
 }
 
-input[type=text], input[type=password], input[type=email], input[type=tel], input[type=search], select {
+input[type=text], input[type=password], input[type=email], input[type=number],
+input[type=file], input[type=tel], input[type=search], select {
     width: 100%;
     padding: 12px 15px;
     margin: 8px 0;
@@ -174,7 +175,29 @@ textarea {
     margin-top: 70px;
     margin-bottom: 70px
 }
-
+.add-meal-btn {
+    width: auto;
+    height: auto;
+    margin: auto auto 10px auto;
+}
+.accept-btn {
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+.accept-btn:hover {
+    background: green;
+    color: white;
+}
+.reject-btn:hover {
+    background: red;
+    color: white;
+}
+.reject-btn {
+    width: auto;
+    height: auto;
+    margin: auto;
+}
 .message h3 {
     margin: 0;
     color: #fff;
