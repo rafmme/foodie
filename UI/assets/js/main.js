@@ -53,7 +53,7 @@ function initMap() {
     });
 
     const infoWindow = new google.maps.InfoWindow({
-        content: `<p style="font-weight: bolder">Pets Mart Head Office Location</p>`
+        content: `<p style="font-weight: bolder">Fast Food Fast Restaurant Building</p>`
     });
     marker.addListener('click', () => {
         infoWindow.open(map, marker);
