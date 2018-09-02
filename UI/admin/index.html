@@ -1,0 +1,249 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Home | Foodie</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifo">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header id="header">
+        <nav class="topnav" id="myTopnav">
+            <a href="index.html" id="brand">FOODIE</a>
+            <div id="rule"></div>
+            <div class="lnk">
+                <a class="alink" style="display: none;">g</a>
+                <a href="#">
+                    <i class="fa fa-user"></i> Hello! Admin</a>
+                <a href="#new-orders">
+                    <i class="fa fa-dollar"></i> New Orders</a>
+                <a href="#all-orders">
+                    <i class="fa fa-dollar"></i> All Orders</a>
+                <a href="foods.html">
+                    <i class="fa fa-spoon"></i> Foods</a>
+                <a href="../login.html">
+                    <i class="fa fa-sign-out"></i> Sign out</a>
+            </div>
+            <a href="javascript:void(0);" id="toggle" class="icon" onclick="toggleBtn()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </nav>
+    </header>
+    <div class=" row center">
+        <h2 id="new-orders">Incoming Orders</h2>
+        <div class="row table-padding">
+            <form action="#" method="post">
+                <div class="row order-box-p" style="width: 70%">
+                    <div class="col-3-2">
+                        <input type="search" name="" id="order-search-box" required placeholder="Search new orders">
+                    </div>
+                    <div class="col-2-3">
+                        <select>
+                            <option value="all">All</option>
+                            <option value="new">Date</option>
+                            <option value="accepted">Time</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">S/N</th>
+                        <th scope="col">OrderID</th>
+                        <th scope="col">Customer</th>
+                        <th scope="col">Food Item</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Status</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="S/N">1</td>
+                        <td data-label="OrderID">OD4575-4748</td>
+                        <td data-label="Customer">far@gmail.com</td>
+                        <td data-label="Food Item">Fried Burger</td>
+                        <td data-label="Amount">₦1,190.50</td>
+                        <td data-label="Date">08/31/2018</td>
+                        <td data-label="Status">Pending</td>
+                        <td data-label=""><button class="accept-btn">Accept</button></td>
+                        <td data-label=""><button class="reject-btn">Reject</button></td>
+                    </tr>
+                    <tr>
+                        <td data-label="S/N">2</td>
+                        <td data-label="OrderID">OD4575-4747</td>
+                        <td data-label="Customer">man@gmail.com</td>
+                        <td data-label="Food Item">Fried Burger</td>
+                        <td data-label="Amount">₦1,190.50</td>
+                        <td data-label="Date">08/31/2018</td>
+                        <td data-label="Status">Pending</td>
+                        <td data-label=""><button class="accept-btn">Accept</button></td>
+                        <td data-label=""><button class="reject-btn">Reject</button></td>
+                    </tr>
+                    <tr>
+                        <td data-label="S/N">3</td>
+                        <td data-label="OrderID">OD4575-4746</td>
+                        <td data-label="Customer">jad@gmail.com</td>
+                        <td data-label="Food Item">Fried Burger</td>
+                        <td data-label="Amount">₦1,190.50</td>
+                        <td data-label="Date">08/31/2018</td>
+                        <td data-label="Status">Pending</td>
+                        <td data-label=""><button class="accept-btn">Accept</button></td>
+                        <td data-label=""><button class="reject-btn">Reject</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+    </div>
+    <div class=" row center">
+        <h2 id="all-orders">All Orders</h2>
+        <div class="row table-padding">
+            <form action="#" method="post">
+                <div class="row order-box-p" style="width: 70%">
+                    <div class="col-3-2">
+                        <input type="search" name="" id="order-search-box" required placeholder="Search orders">
+                    </div>
+                    <div class="col-2-3">
+                        <select>
+                            <option value="all">All</option>
+                            <option value="new">New</option>
+                            <option value="accepted">Accepted</option>
+                            <option value="Deliverd">Deliverd</option>
+                            <option value="pending">Pending</option>
+                            <option value="pending">Canceled</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">S/N</th>
+                        <th scope="col">OrderID</th>
+                        <th scope="col">Customer</th>
+                        <th scope="col">Food Item</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Status</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="S/N">1</td>
+                        <td data-label="OrderID">OD4575-4748</td>
+                        <td data-label="Customer">jma@yahoo.com</td>
+                        <td data-label="Food Item">Fried Burger</td>
+                        <td data-label="Amount">₦1,190.50</td>
+                        <td data-label="Date">08/31/2018</td>
+                        <td data-label="Status">Pending</td>
+                        <td data-label=""><button class="accept-btn" onclick="showModal('update')">Update</button></td>
+                    </tr>
+                    <tr>
+                        <td data-label="S/N">2</td>
+                        <td data-label="OrderID">OD4575-4747</td>
+                        <td data-label="Customer">jma@yahoo.com</td>
+                        <td data-label="Food Item">Fried Burger</td>
+                        <td data-label="Amount">₦1,190.50</td>
+                        <td data-label="Date">08/31/2018</td>
+                        <td data-label="Status">Delivered</td>
+                        <td data-label=""></td>
+                    </tr>
+                    <tr>
+                        <td data-label="S/N">3</td>
+                        <td data-label="OrderID">OD4575-4746</td>
+                        <td data-label="Customer">jma@yahoo.com</td>
+                        <td data-label="Food Item">Fried Burger</td>
+                        <td data-label="Amount">₦1,190.50</td>
+                        <td data-label="Date">08/31/2018</td>
+                        <td data-label="Status">Accepted</td>
+                        <td data-label=""><button class="accept-btn" onclick="showModal('update')">Update</button></td>
+                    </tr>
+                    <tr>
+                        <td data-label="S/N">4</td>
+                        <td data-label="OrderID">OD4575-4745</td>
+                        <td data-label="Customer">jma@yahoo.com</td>
+                        <td data-label="Food Item">Fried Burger</td>
+                        <td data-label="Amount">₦1,190.50</td>
+                        <td data-label="Date">08/31/2018</td>
+                        <td data-label="Status">Delivered</td>
+                        <td data-label=""></td>
+                    </tr>
+                    <tr>
+                        <td data-label="S/N">5</td>
+                        <td data-label="OrderID">OD4575-4745</td>
+                        <td data-label="Customer">jma@yahoo.com</td>
+                        <td data-label="Food Item">Fried Burger</td>
+                        <td data-label="Amount">₦1,190.50</td>
+                        <td data-label="Date">08/31/2018</td>
+                        <td data-label="Status">Canceled</td>
+                        <td data-label=""></td>
+                    </tr>
+                    <tr>
+                        <td data-label="S/N">6</td>
+                        <td data-label="OrderID">OD4575-4744</td>
+                        <td data-label="Customer">jma@yahoo.com</td>
+                        <td data-label="Food Item">Fried Burger</td>
+                        <td data-label="Amount">₦1,190.50</td>
+                        <td data-label="Date">08/31/2018</td>
+                        <td data-label="Status">Canceled</td>
+                        <td data-label=""></td>
+                    </tr>
+                    <tr>
+                        <td data-label="S/N">7</td>
+                        <td data-label="OrderID">OD4575-4743</td>
+                        <td data-label="Customer">jma@yahoo.com</td>
+                        <td data-label="Food Item">Fried Burger</td>
+                        <td data-label="Amount">₦1,190.50</td>
+                        <td data-label="Date">08/31/2018</td>
+                        <td data-label="Status">Pending</td>
+                        <td data-label=""><button class="accept-btn" onclick="showModal('update')">Update</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+    </div>
+    <div id="update" class="modal">
+            <form class="container modal-content animate" method="POST" id="update-form">
+                <div class="imgcontainer">
+                    <span style="margin-top: -15px;" onclick="closeModal('update')" class="close" title="Close Modal">&times;</span>
+                </div>
+                <h3>Update Order</h3>
+                <label for="orderID">Order ID</label>
+                <input type="text" name="" id="orderID" value="OD4558-5777" disabled>
+                <label for="customer">Customer</label>
+                <input type="text" name="" id="customer" value="rafmme@gmail.com" disabled>
+                <label for="title">Food</label>
+                <input type="text" name="" id="title" disabled value="Fried Water">
+                <label for="qty">Quantity</label>
+                <input type="number" value="10" name="" id="qty" disabled value="1">
+                <label for="price">Price</label>
+                <input type="number" value="5000" name="" id="price" disabled value="4,000">
+                <label for="Status">Mark as completed</label>
+                <select name="" id="status">
+                    <option value=""></option>
+                    <option value="completed">completed</option>
+                </select>
+                <button style="margin-top: auto;" type="submit">Modify Order</button>
+            </form>
+        </div>
+    <footer>
+        <p class="text-center">&copy; faray</p>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
