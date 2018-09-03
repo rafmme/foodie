@@ -11,7 +11,7 @@ describe('API endpoint POST /auth/signup', () => {
     chai.request(app)
       .post('/api/v1/auth/signup')
       .send(mockUsers[4])
-      .then((res) => {
+      .end((err, res) => {
         res.should.have.status(201);
         expect(res.body).to.be.an('object');
         res.body.should.have.property('token');
@@ -30,7 +30,7 @@ describe('API endpoint POST /auth/signup', () => {
     chai.request(app)
       .post('/api/v1/auth/signup')
       .send(mockUsers[1])
-      .then((res) => {
+      .end((err, res) => {
         res.should.have.status(409);
         expect(res.body.success).to.equal(false);
         expect(res.body.status).to.equal(409);
@@ -46,7 +46,7 @@ describe('API endpoint POST /auth/signup', () => {
     chai.request(app)
       .post('/api/v1/auth/signup')
       .send(mockUsers[0])
-      .then((res) => {
+      .end((err, res) => {
         res.should.have.status(400);
         expect(res.body.success).to.equal(false);
         expect(res.body.status).to.equal(400);
@@ -66,7 +66,7 @@ describe('API endpoint POST /auth/signup', () => {
     chai.request(app)
       .post('/api/v1/auth/signup')
       .send(mockUsers[2])
-      .then((res) => {
+      .end((err, res) => {
         res.should.have.status(400);
         expect(res.body.success).to.equal(false);
         expect(res.body.status).to.equal(400);
@@ -82,7 +82,7 @@ describe('API endpoint POST /auth/signup', () => {
     chai.request(app)
       .post('/api/v1/auth/signup')
       .send(mockUsers[3])
-      .then((res) => {
+      .end((err, res) => {
         res.should.have.status(400);
         expect(res.body.success).to.equal(false);
         expect(res.body.status).to.equal(400);
@@ -102,7 +102,7 @@ describe('API endpoint POST /auth/signup', () => {
     chai.request(app)
       .post('/api/v1/auth/signup')
       .send(mockUsers[5])
-      .then((res) => {
+      .end((err, res) => {
         res.should.have.status(400);
         expect(res.body.success).to.equal(false);
         expect(res.body.status).to.equal(400);
