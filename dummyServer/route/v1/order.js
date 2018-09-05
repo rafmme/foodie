@@ -10,6 +10,7 @@ orderRouter.post(
   OrderValidation.validateOrderInput,
   OrderValidation.verifyFoodAndUser,
   OrderController.makeOrder
-);
+)
+  .get('/orders/', OrderController.getAllOrders);
 
 export default orderRouter;

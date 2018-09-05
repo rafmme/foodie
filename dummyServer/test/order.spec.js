@@ -99,9 +99,7 @@ describe('API endpoint GET /orders/', () => {
           );
           expect(res.body.orders[0].customer).to.be.an('object');
           expect(res.body.orders[0].food).to.be.an('object');
-          res.body.orders[0].customer.should.have.keys(
-            'userId', 'fullname', 'email'
-          );
+          res.body.orders[0].customer.should.have.keys('userId', 'fullname', 'email');
           res.body.orders[0].food.should.have.keys(
             'foodId', 'title', 'description',
             'price'
