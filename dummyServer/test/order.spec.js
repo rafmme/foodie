@@ -17,9 +17,11 @@ describe('API endpoint POST /orders/', () => {
         res.body.should.have.property('message');
         res.body.should.have.property('order');
         expect(res.body.order).to.be.an('object');
-        res.body.order.should.have.keys('id', 'foodId',
+        res.body.order.should.have.keys(
+          'id', 'foodId',
           'customerId', 'quantity', 'createdAt',
-          'updatedAt', 'deliveryAddress', 'status');
+          'updatedAt', 'deliveryAddress', 'status'
+        );
         expect(res.body.order.status).to.equal('pending');
         expect(res.body.message).to.equal('Order was made successfully');
         expect(res.body.status).to.equal(201);
