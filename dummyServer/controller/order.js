@@ -59,24 +59,18 @@ export default class OrderController {
 
       // fetch customer info from data structure
       const customer = users.find(user => (order.customerId === user.id));
-      const { fullname, email } = customer;
       const customerInfo = {
         userId: customer.id,
-        fullname,
-        email
+        fullname: customer.fullname,
+        email: customer.email
       };
-      const {
-        title,
-        description,
-        price
-      } = foodItem;
       const food = {
         foodId: foodItem.id,
-        title,
-        description,
-        price
+        title: foodItem.title,
+        description: foodItem.description,
+        price: foodItem.price
       };
-      // Push all fetched order info onto allOrders array
+      // Push all fetched order info into allOrders array
       allOrders.push({
         orderId: order.id,
         customer: customerInfo,
@@ -94,6 +88,57 @@ export default class OrderController {
       status: 200,
       message: 'All orders fetched successfully',
       orders: allOrders,
+    });
+  }
+
+  /**
+      * @description handles fetching a specific order
+      * @param {*} req - Incoming Request object
+      * @param {*} res - Incoming Message
+      * @returns {object} res - Route response
+      */
+  static getOrder(req, res) {
+    const id = Number.parseInt(req.params.id, 10);
+    const order = orders.find(el => el.id === id);
+    if (order) {
+      const foodItem = foods.find(food => (food.id === order.foodId));
+      const customer = users.find(user => (order.customerId === user.id));
+      const customerInfo = {
+        userId: customer.id,
+        fullname: customer.fullname,
+        email: customer.email
+      };
+      const food = {
+        foodId: foodItem.id,
+        title: foodItem.title,
+        description: foodItem.description,
+        price: foodItem.price
+      };
+      const newOrder = {
+        orderId: order.id,
+        customer: customerInfo,
+        food,
+        quantity: order.quantity,
+        totalPrice: order.quantity * food.price,
+        deliveryAddress: order.deliveryAddress,
+        status: order.status,
+        createdAt: order.createdAt,
+        updatedAt: order.updatedAt,
+      };
+
+      return res.status(200).send({
+        success: true,
+        status: 200,
+        message: 'Order was fetched successfully',
+        order: newOrder
+      });
+    }
+    return res.status(404).send({
+      success: false,
+      status: 404,
+      error: {
+        message: `No Order matches the ID of ${id}`
+      }
     });
   }
 }
