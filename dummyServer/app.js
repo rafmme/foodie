@@ -24,6 +24,11 @@ app.use(expressValidation());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', apiRouter);
+app.get('/', (req, res) => {
+  res.status(200).send({
+    message: 'Welcome to the Fast Food Fast App'
+  });
+});
 
 // Show 404 error for unexisting route on the app
 app.use((req, res) => res.status(404).send({
